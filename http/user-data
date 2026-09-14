@@ -1,0 +1,21 @@
+#cloud-config
+autoinstall:
+  version: 1
+  identity:
+    hostname: ubuntu-lab
+    username: labuser
+    password: "$6$MyY47NXkJwkvpEzW$Btqfn7LIwc/B3uMbxW.u7/ljtIjNLI9wGk1mspLDNF/DLZjf8Ct5xbXDYAP7iRaLmI1hgngR9BWHjgP55qmqn0"
+  ssh:
+    install-server: true
+    allow-pw: true
+  storage:
+    layout:
+      name: lvm
+  packages:
+    - qemu-guest-agent
+    - openssh-server
+  late-commands:
+    - 'echo "labuser ALL=(ALL) NOPASSWD:ALL" > /target/etc/sudoers.d/90-labuser'
+    - 'chmod 0440 /target/etc/sudoers.d/90-labuser'
+    - 'curtin in-target -- systemctl enable qemu-guest-agent'
+    - 'curtin in-target -- systemctl enable ssh'

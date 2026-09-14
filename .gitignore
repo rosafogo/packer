@@ -1,0 +1,6 @@
+output-*/
+.devcontainer
+*.vdi
+*.vmdk
+*.ovf
+*.ova
