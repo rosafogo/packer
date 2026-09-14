@@ -13,7 +13,6 @@ sed -e "s|__USER__|${LAB_USER}|g" \
     -e "s@__PASS_HASH__@${HASH}@g" \
     http/user-data.tpl > http/user-data
 
-# Packer carrega *.auto.pkrvars.hcl automaticamente
 cat > lab.auto.pkrvars.hcl <<EOF
 ssh_username         = "${LAB_USER}"
 ssh_password         = "${LAB_PASSWORD}"
