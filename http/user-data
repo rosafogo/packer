@@ -4,7 +4,7 @@ autoinstall:
   identity:
     hostname: multiflora
     username: admin
-    password: "$6$MyY47NXkJwkvpEzW$Btqfn7LIwc/B3uMbxW.u7/ljtIjNLI9wGk1mspLDNF/DLZjf8Ct5xbXDYAP7iRaLmI1hgngR9BWHjgP55qmqn0"
+    password: "$6$dIMP8PyLSkuJcSIR$sR2JBRwrlgjiTH4AA19gmYCSs9uD/Le6dxy3kI.QUaPfkRAjvVr9FtJAeWmwz0gfDyoeYy8m4gzjD8djSKp2f0"
   ssh:
     install-server: true
     allow-pw: true
@@ -15,7 +15,7 @@ autoinstall:
     - qemu-guest-agent
     - openssh-server
   late-commands:
-    - 'echo "labuser ALL=(ALL) NOPASSWD:ALL" > /target/etc/sudoers.d/90-labuser'
-    - 'chmod 0440 /target/etc/sudoers.d/90-labuser'
+    - 'echo "admin ALL=(ALL) NOPASSWD:ALL" > /target/etc/sudoers.d/90-admin'
+    - 'chmod 0440 /target/etc/sudoers.d/90-admin'
     - 'curtin in-target -- systemctl enable qemu-guest-agent'
     - 'curtin in-target -- systemctl enable ssh'

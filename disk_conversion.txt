@@ -1,0 +1,7 @@
+# qcow2 to VDI (VirtualBox)
+
+qemu-img convert -f qcow2 -O vdi imagem.qcow2 imagem.vdi
+
+# qcow2 to VMDK (VMWare)
+
+qemu-img convert -f qcow2 -O vmdk imagem.qcow2 imagem.vmdk

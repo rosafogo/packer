@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-LAB_USER="${LAB_USER:-labuser}"
-LAB_PASSWORD="${LAB_PASSWORD:-labpass}"
+LAB_USER="${LAB_USER:-admin}"
+LAB_PASSWORD="${LAB_PASSWORD:-1234}"
 CS_PASSWORD="${CS_PASSWORD:-$LAB_PASSWORD}"
 
 command -v openssl >/dev/null || { echo "openssl é necessário"; exit 1; }

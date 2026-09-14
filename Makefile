@@ -14,11 +14,11 @@ validate:
 build:
 	packer build .
 	@echo ""
-	@echo "✔ Imagem qcow2: output-ubuntu-lab/packer-ubuntu-lab"
+	@echo "✔ Imagem qcow2: outputs/ubuntu-lab-multiflora"
 	@echo "  Suba a VM com: make run"
 
 run:
 	bash run-vm.sh
 
 clean:
-	rm -rf output-ubuntu-lab http/user-data lab.auto.pkrvars.hcl
+	rm -rf output-ubuntu-lab outputs http/user-data lab.auto.pkrvars.hcl

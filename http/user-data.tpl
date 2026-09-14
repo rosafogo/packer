@@ -2,7 +2,7 @@
 autoinstall:
   version: 1
   identity:
-    hostname: ubuntu-lab
+    hostname: multiflora
     username: __USER__
     password: "__PASS_HASH__"
   ssh:

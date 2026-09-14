@@ -1,1 +1,0 @@
-export LAB_USER=labuser LAB_PASSWORD='1234' CS_PASSWORD='1234'

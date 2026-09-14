@@ -7,10 +7,11 @@ packer {
   }
 }
 
-source "qemu" "ubuntu-lab" {
-  vm_name      = "ubuntu-lab"
-  iso_url      = var.iso_url
-  iso_checksum = var.iso_checksum
+source "qemu" "ubuntu-lab-multiflora" {
+  vm_name          = "ubuntu-lab-multiflora"
+  output_directory = "outputs"
+  iso_url          = var.iso_url
+  iso_checksum     = var.iso_checksum
 
   # Build 100% headless, usando aceleração KVM
   headless    = var.headless
@@ -48,8 +49,8 @@ source "qemu" "ubuntu-lab" {
 }
 
 build {
-  name    = "ubuntu-lab"
-  sources = ["source.qemu.ubuntu-lab"]
+  name    = "ubuntu-lab-multiflora"
+  sources = ["source.qemu.ubuntu-lab-multiflora"]
 
   provisioner "shell" {
     environment_vars = [

@@ -4,3 +4,5 @@ output-*/
 *.vmdk
 *.ovf
 *.ova
+.venv/
+__pycache__/

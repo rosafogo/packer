@@ -17,13 +17,13 @@ variable "ssh_username" {
 
 variable "ssh_password" {
   type      = string
-  default   = "labpass"
+  default   = "1234"
   sensitive = true
 }
 
 variable "code_server_password" {
   type      = string
-  default   = "labpass"
+  default   = "1234"
   sensitive = true
 }
 
@@ -40,7 +40,7 @@ variable "memory" {
 
 variable "disk_size" {
   type    = string
-  default = "60G"
+  default = "20G"
 }
 
 variable "headless" {
