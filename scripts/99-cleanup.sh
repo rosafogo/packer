@@ -12,6 +12,6 @@ sudo rm -rf /var/log/installer
 sudo cloud-init clean --logs --seed 2>/dev/null || true
 
 # Opcional: zerar espaço livre para reduzir o tamanho do qcow2
-# sudo dd if=/dev/zero of=/EMPTY bs=1M || true; sudo rm -f /EMPTY
+sudo dd if=/dev/zero of=/EMPTY bs=1M || true; sudo rm -f /EMPTY
 
 history -c || true

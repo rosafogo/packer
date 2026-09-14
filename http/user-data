@@ -2,8 +2,8 @@
 autoinstall:
   version: 1
   identity:
-    hostname: ubuntu-lab
-    username: labuser
+    hostname: multiflora
+    username: admin
     password: "$6$MyY47NXkJwkvpEzW$Btqfn7LIwc/B3uMbxW.u7/ljtIjNLI9wGk1mspLDNF/DLZjf8Ct5xbXDYAP7iRaLmI1hgngR9BWHjgP55qmqn0"
   ssh:
     install-server: true

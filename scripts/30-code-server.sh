@@ -19,6 +19,6 @@ chmod 600 "${HOME}/.config/code-server/config.yaml"
 
 sudo systemctl enable --now "code-server@${LAB_USER}"
 
-# Extensões úteis (opcional)
 code-server --install-extension redhat.vscode-yaml || true
 code-server --install-extension ms-python.python || true
+code-server --install-extension devcontainers || true
